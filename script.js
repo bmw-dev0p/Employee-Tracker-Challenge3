@@ -24,8 +24,8 @@ const collectEmployees = function() {
   employeesArray.push(currentEmployee);
 
   //log to check it works
-  console.log(currentEmployee);
-  console.log(employeesArray);
+  // console.log(currentEmployee);
+  // console.log(employeesArray);
 
   //prompt to control the boolean of "newEmployee" yes/no
   newEmployee = window.confirm("would you like to enter another employee?")
@@ -44,8 +44,6 @@ const displayAverageSalary = function(employeesArray) {
   //declare variables
   let totalSalary =  0;
   let averageSalary = 0;
-  let averageSalaryInt = 0;
-  let averageSalaryDec = 0;
 
   //conditional statement to catch no employees
   //this prevents dividing by 0
@@ -56,12 +54,11 @@ const displayAverageSalary = function(employeesArray) {
     for (i = 0; i < employeesArray.length; i++) {
       //add employee salary to a running total
       totalSalary += employeesArray[i].salary;
-      // divided by employees for average, rounded to 2 decimals
-      averageSalary = (totalSalary / employeesArray.length).toFixed(2);
-      
     }
+    // divided by employees for average, rounded to 2 decimals
+    averageSalary = (totalSalary / employeesArray.length).toFixed(2);
     //output answer
-    console.log(`The average employee salary between our ${employeesArray.length} employee(s) is ${averageSalary}`);
+    console.log(`The average employee salary between our ${employeesArray.length} employee(s) is $${averageSalary}`);
   }
 }
 
